@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <style>
+        ::placeholder {
+            color: rgba(255, 255, 255, 0.705) !important;
+        }
+        :-ms-input-placeholder {
+            color: rgba(255, 255, 255, 0.705) !important;
+        }
+        ::-ms-input-placeholder {
+            color: rgba(255, 255, 255, 0.705) !important;
+        }
+        /* For Firefox */
+        input:-moz-placeholder,
+        textarea:-moz-placeholder {
+            color: rgba(255, 255, 255, 0.705) !important;
+        }
+
+        footer {
+            background-color: #333;
+            text-align: center;
+            padding: 10px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        body {
+            background-color: black;
+            color: white;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #333;
+            text-align: center;
+            padding:2px;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            background-color: #444;
+            justify-content: center;
+            padding: 10px;
+        }
+        nav ul li {
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        nav ul li a:hover {
+            text-decoration: none;
+            color: rgb(102, 102, 102)
+        }
+        
+    </style>
+</head>
+<body style="background-color: black; font-family: cursive;">
+    <header>
+        <h1 style="font-size: 50px;">Veta Programs</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="../index.html">Main Page</a></li>
+            <li><a href="../hacks/index.html">Hacks</a></li>
+            <li><a href="../programs/index.html">Programs</a></li>
+            <li><a href="index.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container" style="width: 50%; margin-top: 100px;">
+        <form action="https://formspree.io/f/mrgwbzpp" method="POST">
+            <div class="form-group">
+                <label for="inputName">Name</label>
+                <input type="text" class="form-control" name="name" id="inputName" placeholder="Enter your name" style="background-color: #353839; border: transparent; color: white;" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" required>
+            </div>
+            <div class="form-group">
+                <label for="inputEmail">E-Mail</label>
+                <input type="email" class="form-control" name="_replyto" id="inputEmail" placeholder="Enter your E-Mail" style="background-color: #353839; border: transparent; color: white;" required>
+            </div>
+            <div class="form-group">
+                <label for="inputMessage">Message</label>
+                <textarea class="form-control" name="message" id="inputMessage" rows="4" placeholder="Enter your message" style="background-color: #353839; border: transparent; color: white;" required></textarea>
+            </div>
+            <input type="hidden" name="_subject" value="New Contact Form Submission">
+            <button type="submit" class="btn btn-primary" style="background-color: #4B4E53; border: #989EA1 double 1px;">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        // Apply white color to placeholder text on page load
+        window.addEventListener('DOMContentLoaded', function() {
+            var inputs = document.querySelectorAll('input, textarea');
+            inputs.forEach(function(input) {
+                input.style.color = 'white';
+                input.addEventListener('focus', function() {
+                    this.placeholder = '';
+                });
+                input.addEventListener('blur', function() {
+                    this.placeholder = 'Enter your name';
+                });
+            });
+        });
+    </script>
+
+<footer>
+    <p>&copy; 2023 Veta Programs. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
